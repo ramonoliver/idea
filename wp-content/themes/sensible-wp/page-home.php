@@ -19,7 +19,13 @@ get_header(); ?>
                             
                					<h1 class="animated fadeInDown delay">
 									<?php echo esc_textarea( get_theme_mod( 'sensiblewp_first_heading')) ?>
-                                </h1> 
+								</h1>
+								<!-- Variável Subtitulo-->
+								<h2 class="animated fadeInRight delay">
+									Transformamos ideias em resultado
+								</h2>
+								<!-- Variável Botão -->
+								<p class="animated fadeInRight delay"><a href="#"><i>+</i>Nossos <b>serviços</b></a></p>
                                 
 							<?php endif; ?> 
                             
@@ -104,6 +110,12 @@ get_header(); ?>
         	<?php get_template_part( 'content', 'services' ); // services ?> 
               
 		<?php endif; ?>
+
+		<?php if( get_theme_mod( 'active_home_widget' ) == '') : ?>
+        
+        	<?php get_template_part( 'content', 'home-widget' ); // home widget ?> 
+		
+		<?php endif; ?>
         
         
         <?php if( get_theme_mod( 'active_blog' ) == '') : ?> 
@@ -117,13 +129,6 @@ get_header(); ?>
         
         	<?php get_template_part( 'content', 'team' ); // team ?>
         
-		<?php endif; ?>
-		
-        
-        <?php if( get_theme_mod( 'active_home_widget' ) == '') : ?>
-        
-        	<?php get_template_part( 'content', 'home-widget' ); // home widget ?> 
-		
 		<?php endif; ?>
 		
 

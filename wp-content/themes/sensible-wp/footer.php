@@ -137,7 +137,38 @@
     	</div><!-- grid -->
     </div><!-- footer-contact --> 
     
-    <?php endif; ?> 
+	<?php endif; ?> 
+
+	<div class="home-banner">
+		<div class="area-banner">
+			<img src="http://localhost/idea/wp-content/themes/sensible-wp/img/banner-solucoes-ideainfo.jpg" alt="Idea Info. Digital - Soluções">
+		</div>
+	</div>
+	
+
+	<div class="home-contato">
+		<div class="area-contato col-1-2 wow animated fadeInUp animated">
+			<div class="area-contato-title">
+				<h5>Fale com a gente</h5>
+				<span>Vamos começar uma história de sucesso juntos?</span>
+			</div>
+			<div class="area-contato-form">
+				
+			</div>
+		</div>
+		
+		<div class="area-infos col-1-2 wow animated fadeInUp animated">
+			<div class="area-infos-title">
+				<h5>
+					Se <b>você</b> tem alguma <b>dúvida</b>, por favor não hesite em nos enviar uma <b>mensagem</b>
+				</h5>
+			</div>
+			<ul class="info-list">
+				<li><i class="fa fa-envelope"></i>contato@ideainfo.digital</li>
+				<li><i class="fa fa-whatsapp"></i>(85) 991385587</li>
+			</ul>
+		</div>
+	</div>
 	
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

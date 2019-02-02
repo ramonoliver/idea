@@ -29,6 +29,7 @@ get_header(); ?>
     		<div class="grid grid-pad">
         		<div class="col-1-1">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<div class="breadcrumb"><?php bloglite_breadcrumb(); ?></div>
         		</div><!-- .col-1-1 -->
         	</div><!-- .grid -->
 		</header><!-- .entry-header -->

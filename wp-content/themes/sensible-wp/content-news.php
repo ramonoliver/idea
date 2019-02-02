@@ -13,13 +13,14 @@
                 
                 	<div class="grid grid-pad">
             			<div class="col-1-1">
-                    		<h6 class="wow animated fadeIn"><?php echo wp_kses_post( get_theme_mod( 'blog_text' )); ?></h6>
+							<h6 class="wow animated fadeIn"><?php echo wp_kses_post( get_theme_mod( 'blog_text' )); ?></h6>
+							<span class="subtitle"><?php echo wp_kses_post( get_theme_mod( 'blog_textsubtitle' )); ?></span>
                     	</div><!-- col-1-1 -->  
                     </div><!-- grid -->
                     
 				<?php endif; ?> 
            	    	
-            	<div class="grid grid-pad no-top">
+            	<div class="grid grid-pad no-top list-news">
                 
                 	<?php
 						global $post;
@@ -40,9 +41,11 @@
               
                         <div class="col-1-3 tri-clear wow animated fadeInUp" data-wow-delay="0.25s">
             
-            				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('sensible-wp-home-blog'); ?></a> 
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('sensible-wp-home-blog'); ?></a> 
+							<span class="news-date"><?php the_date(); ?></span>
 							<h5><?php the_title(); ?></h5>
-                        	<p><?php $content = get_the_content(); echo wp_trim_words( $content , '20' ); ?> <a href="<?php the_permalink(); ?>"> <?php echo esc_html__( 'Read More', 'sensible-wp' ) ?></a></p>
+							<p><?php $content = get_the_content(); echo wp_trim_words( $content , '20' ); ?></p>
+							<a href="<?php the_permalink(); ?>"><span class="icon-more">+</span> <?php echo esc_html__( 'Leia mais', 'sensible-wp' ) ?></a>
                         
                         </div><!-- col-1-3 --> 
 

@@ -14,7 +14,8 @@
         			<div class="grid grid-pad">
                     
             			<div class="col-1-1">
-                        	<h6 class="wow animated fadeIn"><?php echo wp_kses_post(get_theme_mod( 'services_text' )); ?></h6>
+							<h6 class="wow animated fadeIn"><?php echo wp_kses_post(get_theme_mod( 'services_text' )); ?></h6>
+							<span class="subtitle wow animated fadeIn"><?php echo wp_kses_post(get_theme_mod( 'services_subtext' )); ?></span>
                         </div>
                         
             		</div><!-- grid -->
@@ -25,7 +26,7 @@
                 
         		<div class="grid grid-pad no-top">
                     
-					<div class="col-1-<?php echo esc_html( $services_columns_number ); ?> tri-clear wow animated fadeIn" data-wow-delay="0.25s"> 
+					<div class="col-1-<?php echo esc_html( $services_columns_number ); ?> wow animated fadeIn" data-wow-delay="0.25s"> 
     					<div class="service sbox-1">
                         
                         <?php if( get_theme_mod( 'active_service_1' ) == '') : ?>
@@ -46,8 +47,8 @@
                              
   						</div><!-- service --> 
 					</div><!-- col-1-3 --> 
-                    
-                    <div class="col-1-<?php echo esc_html( $services_columns_number ); ?> tri-clear wow animated fadeIn" data-wow-delay="0.25s"> 
+
+					<div class="col-1-<?php echo esc_html( $services_columns_number ); ?> wow animated fadeIn" data-wow-delay="0.25s"> 
     					<div class="service sbox-2">
                         
                         <?php if( get_theme_mod( 'active_service_2' ) == '') : ?>
@@ -68,8 +69,8 @@
                              
   						</div><!-- service --> 
 					</div><!-- col-1-3 --> 
-     
-                    <div class="col-1-<?php echo esc_html( $services_columns_number ); ?> tri-clear wow animated fadeIn" data-wow-delay="0.25s"> 
+
+					<div class="col-1-<?php echo esc_html( $services_columns_number ); ?> wow animated fadeIn" data-wow-delay="0.25s"> 
     					<div class="service sbox-3">
                         
                          <?php if( get_theme_mod( 'active_service_3' ) == '') : ?>
@@ -84,6 +85,72 @@
                             
                             <?php if ( get_theme_mod( 'service_text_3' ) ) : ?>
               					<p class="member-description"><?php echo wp_kses_post( get_theme_mod( 'service_text_3' )); ?></p> 
+                            <?php endif; ?> 
+                            
+                        <?php endif; ?> 
+                             
+  						</div><!-- service --> 
+					</div><!-- col-1-3 -->  
+
+					<div class="col-1-<?php echo esc_html( $services_columns_number ); ?> wow animated fadeIn" data-wow-delay="0.25s"> 
+    					<div class="service sbox-4">
+                        
+                        <?php if( get_theme_mod( 'active_service_4' ) == '') : ?>
+                        
+                        	<?php if ( get_theme_mod( 'service_icon_4' ) ) : ?>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_4' )); ?>"></i>
+                            <?php endif; ?> 
+                            
+                            <?php if ( get_theme_mod( 'service_title_4' ) ) : ?>
+              					<h5><?php echo wp_kses_post( get_theme_mod( 'service_title_4' )); ?></h5>
+                            <?php endif; ?> 
+                            
+                            <?php if ( get_theme_mod( 'service_text_4' ) ) : ?>
+              					<p class="member-description"><?php echo wp_kses_post( get_theme_mod( 'service_text_4' )); ?></p>
+                            <?php endif; ?>
+                            
+                        <?php endif; ?>  
+                             
+  						</div><!-- service --> 
+					</div><!-- col-1-3 --> 
+                    
+                    <div class="col-1-<?php echo esc_html( $services_columns_number ); ?> wow animated fadeIn" data-wow-delay="0.25s"> 
+    					<div class="service sbox-5">
+                        
+                        <?php if( get_theme_mod( 'active_service_5' ) == '') : ?>
+                        
+                        	<?php if ( get_theme_mod( 'service_icon_5' ) ) : ?>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_5' )); ?>"></i>
+                            <?php endif; ?> 
+                            
+                            <?php if ( get_theme_mod( 'service_title_5' ) ) : ?>
+              					<h5><?php echo wp_kses_post( get_theme_mod( 'service_title_5' )); ?></h5>
+                            <?php endif; ?> 
+                            
+                            <?php if ( get_theme_mod( 'service_text_5' ) ) : ?>
+              					<p class="member-description"><?php echo wp_kses_post( get_theme_mod( 'service_text_5' )); ?></p>
+                            <?php endif; ?> 
+                            
+                        <?php endif; ?> 
+                             
+  						</div><!-- service --> 
+					</div><!-- col-1-3 --> 
+     
+                    <div class="col-1-<?php echo esc_html( $services_columns_number ); ?> wow animated fadeIn" data-wow-delay="0.25s"> 
+    					<div class="service sbox-6">
+                        
+                         <?php if( get_theme_mod( 'active_service_6' ) == '') : ?>
+                        
+                        	<?php if ( get_theme_mod( 'service_icon_6' ) ) : ?>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_6' )); ?>"></i>
+                            <?php endif; ?> 
+                            
+                            <?php if ( get_theme_mod( 'service_title_6' ) ) : ?>
+              					<h5><?php echo wp_kses_post( get_theme_mod( 'service_title_6' )); ?></h5>
+                            <?php endif; ?> 
+                            
+                            <?php if ( get_theme_mod( 'service_text_6' ) ) : ?>
+              					<p class="member-description"><?php echo wp_kses_post( get_theme_mod( 'service_text_6' )); ?></p> 
                             <?php endif; ?> 
                             
                         <?php endif; ?> 

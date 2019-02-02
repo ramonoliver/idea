@@ -1124,11 +1124,27 @@ function sensiblewp_theme_customizer( $wp_customize ) {
 	); 
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_text', array(
-		'label'    => esc_html__( 'Services Title Text', 'sensible-wp' ),
+		'label'    => esc_html__( 'Services SubTitle Text', 'sensible-wp' ),
 		'section'  => 'sensiblewp_services_section', 
 		'settings' => 'services_text', 
 		'priority'   => 20
 	) ) );
+
+	// Services Subtext
+
+	$wp_customize->add_setting( 'services_subtext',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text',
+	    ) 
+	); 
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_subtext', array(
+		'label'    => esc_html__( 'Services Title Text', 'sensible-wp' ),
+		'section'  => 'sensiblewp_services_section', 
+		'settings' => 'services_subtext', 
+		'priority'   => 20
+	) ) );
+
 	
 	// Services Button Area
 	$wp_customize->add_setting( 'service_button_text',
@@ -1163,7 +1179,7 @@ function sensiblewp_theme_customizer( $wp_customize ) {
         'sensiblewp_services_columns_number',
         array(
             'sanitize_callback' => 'absint',
-            'default'           => '3',
+            'default'           => '6',
         )
     );
 	
@@ -1369,7 +1385,196 @@ function sensiblewp_theme_customizer( $wp_customize ) {
 	'type'     => 'textarea', 
 	'priority'   => 4
 	))); 
+
+	// Home Service Box 4 Section
+	$wp_customize->add_section( 'sensiblewp_services_box_4', array(
+		'title'          => esc_html__( 'Services Box 4', 'sensible-wp' ),
+		'priority'       => 40,
+		'description' => esc_html__( 'Edit your home page services box 3. Choose from any of the icons at http://fortawesome.github.io/Font-Awesome/cheatsheet/. Example: "fa-arrow-right".', 'sensible-wp'),
+		'panel' => 'services_panel',  
+	));
 	
+	$wp_customize->add_setting('active_service_4', 
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_checkbox',
+	    ) 
+	);  
+	
+	$wp_customize->add_control( 
+    'active_service_4', 
+    array(
+        'type' => 'checkbox',
+        'label' => esc_html__( 'Hide Service Box 4', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_4', 
+		'priority'   => 1
+    ));
+	
+	// Service Icon 4
+	$wp_customize->add_setting( 'service_icon_4',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text', 
+	));  
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_icon_4', array(
+		'label'    => esc_html__( 'Service Icon 4', 'sensible-wp' ),
+		'section'  => 'sensiblewp_services_box_4', 
+		'settings' => 'service_icon_4', 
+		'priority'   => 2
+	)));
+	
+	// Service Title 4
+	$wp_customize->add_setting( 'service_title_4',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text', 
+	));  
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_title_4', array(
+		'label'    => esc_html__( 'Service Title 4', 'sensible-wp' ),
+		'section'  => 'sensiblewp_services_box_4',
+		'settings' => 'service_title_4', 
+		'priority'   => 3
+	)));
+	
+	// Service Text 4
+	$wp_customize->add_setting( 'service_text_4' ,
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text',
+	)); 
+	 
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_text_4', array( 
+    'label' => esc_html__( 'Service Text Box 4', 'sensible-wp' ), 
+    'section' => 'sensiblewp_services_box_4',
+    'settings' => 'service_text_4',
+	'type'     => 'textarea', 
+	'priority'   => 4
+	))); 
+
+	// Home Service Box 5 Section
+	$wp_customize->add_section( 'sensiblewp_services_box_5', array(
+		'title'          => esc_html__( 'Services Box 5', 'sensible-wp' ),
+		'priority'       => 40,
+		'description' => esc_html__( 'Edit your home page services box 3. Choose from any of the icons at http://fortawesome.github.io/Font-Awesome/cheatsheet/. Example: "fa-arrow-right".', 'sensible-wp'),
+		'panel' => 'services_panel',  
+	));
+	
+	$wp_customize->add_setting('active_service_5', 
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_checkbox',
+	    ) 
+	);  
+	
+	$wp_customize->add_control( 
+    'active_service_5', 
+    array(
+        'type' => 'checkbox',
+        'label' => esc_html__( 'Hide Service Box 5', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_5', 
+		'priority'   => 1
+    ));
+	
+	// Service Icon 5
+	$wp_customize->add_setting( 'service_icon_5',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text', 
+	));  
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_icon_5', array(
+		'label'    => esc_html__( 'Service Icon 5', 'sensible-wp' ),
+		'section'  => 'sensiblewp_services_box_5', 
+		'settings' => 'service_icon_5', 
+		'priority'   => 2
+	)));
+	
+	// Service Title 5
+	$wp_customize->add_setting( 'service_title_5',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text', 
+	));  
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_title_5', array(
+		'label'    => esc_html__( 'Service Title 5', 'sensible-wp' ),
+		'section'  => 'sensiblewp_services_box_5',
+		'settings' => 'service_title_5', 
+		'priority'   => 3
+	)));
+	
+	// Service Text 5
+	$wp_customize->add_setting( 'service_text_5' ,
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text',
+	)); 
+	 
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_text_5', array( 
+    'label' => esc_html__( 'Service Text Box 5', 'sensible-wp' ), 
+    'section' => 'sensiblewp_services_box_5',
+    'settings' => 'service_text_5',
+	'type'     => 'textarea', 
+	'priority'   => 4
+	))); 
+
+	// Home Service Box 6 Section
+	$wp_customize->add_section( 'sensiblewp_services_box_6', array(
+		'title'          => esc_html__( 'Services Box 6', 'sensible-wp' ),
+		'priority'       => 40,
+		'description' => esc_html__( 'Edit your home page services box 6. Choose from any of the icons at http://fortawesome.github.io/Font-Awesome/cheatsheet/. Example: "fa-arrow-right".', 'sensible-wp'),
+		'panel' => 'services_panel',  
+	));
+	
+	$wp_customize->add_setting('active_service_6', 
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_checkbox',
+	    ) 
+	);  
+	
+	$wp_customize->add_control( 
+    'active_service_6', 
+    array(
+        'type' => 'checkbox',
+        'label' => esc_html__( 'Hide Service Box 6', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_6', 
+		'priority'   => 1
+    ));
+	
+	// Service Icon 6
+	$wp_customize->add_setting( 'service_icon_6',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text', 
+	));  
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_icon_6', array(
+		'label'    => esc_html__( 'Service Icon 6', 'sensible-wp' ),
+		'section'  => 'sensiblewp_services_box_6', 
+		'settings' => 'service_icon_6', 
+		'priority'   => 2
+	)));
+	
+	// Service Title 6
+	$wp_customize->add_setting( 'service_title_6',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text', 
+	));  
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_title_6', array(
+		'label'    => esc_html__( 'Service Title 6', 'sensible-wp' ),
+		'section'  => 'sensiblewp_services_box_6',
+		'settings' => 'service_title_6', 
+		'priority'   => 3
+	)));
+	
+	// Service Text 6
+	$wp_customize->add_setting( 'service_text_6' ,
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text',
+	)); 
+	 
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_text_6', array( 
+    'label' => esc_html__( 'Service Text Box 6', 'sensible-wp' ), 
+    'section' => 'sensiblewp_services_box_6',
+    'settings' => 'service_text_6',
+	'type'     => 'textarea', 
+	'priority'   => 4
+	))); 
+
 	// Blog Panel
 	$wp_customize->add_panel( 'blog_panel', array(
     'priority'       => 28,
@@ -1411,6 +1616,18 @@ function sensiblewp_theme_customizer( $wp_customize ) {
 		'label'    => esc_html__( 'Blog Title Text', 'sensible-wp' ),
 		'section'  => 'sensiblewp_blog_section', 
 		'settings' => 'blog_text', 
+		'priority'   => 2
+	)));
+
+	$wp_customize->add_setting( 'blog_textsubtitle',
+	    array(
+	        'sanitize_callback' => 'sensiblewp_sanitize_text', 
+	));  
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'blog_textsubtitle', array(
+		'label'    => esc_html__( 'Blog Title Text Subtitle', 'sensible-wp' ),
+		'section'  => 'sensiblewp_blog_section', 
+		'settings' => 'blog_textsubtitle', 
 		'priority'   => 2
 	)));
 	

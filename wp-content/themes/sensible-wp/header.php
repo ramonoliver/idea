@@ -22,7 +22,7 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sensible-wp' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-    	<div class="grid grid-pad head-overflow">
+    	<div class="grid grid-pad head-overflow div-header">
 			<div class="site-branding">
 				
 				<?php if ( get_theme_mod( 'sensiblewp_logo' ) ) : ?>
@@ -44,6 +44,16 @@
             </div><!-- site-branding -->
 
 			<div class="navigation-container">
+				<div class="header-social">
+					<ul>
+						<li>
+							<a href="http://instagram.com/ideainfodigital" target="_blank" title="Instagram - @ideainfodigital"><i class="fa fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href="http://facebook.com/ideainfodigital" class="facebookHeader" target="_blank" title="Facebook - @ideainfodigital"><i class="fa fa-facebook"></i></a>
+						</li>
+					</ul>
+				</div>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
                 
 					<button class="menu-toggle toggle-menu menu-right push-body"><?php _e( '<i class="fa fa-bars"></i> Menu', 'sensible-wp' ); ?></button>
