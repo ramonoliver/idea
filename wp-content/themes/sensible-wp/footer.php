@@ -153,7 +153,7 @@
 				<span>Vamos começar uma história de sucesso juntos?</span>
 			</div>
 			<div class="area-contato-form">
-				
+                <?php echo do_shortcode( '[contact-form-7 id="5" title="Formulário de contato 1"]' ); ?>
 			</div>
 		</div>
 		
