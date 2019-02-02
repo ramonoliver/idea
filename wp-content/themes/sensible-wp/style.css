@@ -1306,6 +1306,12 @@ a:active {
 	background: url(img/idea-hover-service.jpg) #e75b14 no-repeat;
 	color: #fff;
 	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+.service:hover .fa {
+	transform: rotateY(360deg);
+	transition: all 0.5s ease-in-out;
+	color: #fff;
 }
 .service p,
 .service a {
