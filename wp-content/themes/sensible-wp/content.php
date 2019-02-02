@@ -10,8 +10,15 @@
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); $image = $image[0]; ?>
           
         <a href="<?php the_permalink(); ?>">    
-    	<header class="blog-featured-img-header" style="background: url('<?php echo $image; ?>');">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<!-- <header class="blog-featured-img-header" style="background: url('<?php echo $image; ?>');"> -->
+		<header class="blog-featured-img-header">
+			<div class="col-1-1">
+				<img src="<?php echo $image; ?>" alt="">
+			</div>
+			<div class="entry-meta">
+				<i class="fa fa-clock-o"></i><?php sensiblewp_posted_on(); ?>
+			</div><!-- .entry-meta -->
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header --> 
         </a>
     
@@ -42,12 +49,13 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+		<a href="<?php the_permalink(); ?>" class="leiamaisBlog">Leia mais</a>  
+	
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-    	<div class="entry-meta">
-			<i class="fa fa-clock-o"></i><?php sensiblewp_posted_on(); ?>
-		</div><!-- .entry-meta -->
+	<!--<footer class="entry-footer">
+    	
 			<?php sensiblewp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer> .entry-footer -->
 </article><!-- #post-## -->

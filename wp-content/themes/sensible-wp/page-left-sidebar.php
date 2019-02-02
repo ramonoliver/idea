@@ -10,8 +10,11 @@ get_header(); ?>
 	<?php if (has_post_thumbnail( $post->ID ) ): ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); $image = $image[0]; ?>
             
-    	<header class="featured-img-header" data-speed="8" data-type="background" style="background: url('<?php echo $image; ?>') 50% 0 no-repeat fixed;">
+    	<header class="featured-img-header" data-speed="8">
     		<div class="grid grid-pad">
+				<div class="col-1-1">
+					<img src="<?php echo $image; ?>" alt="">
+				</div>
         		<div class="col-1-1">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?> 
         		</div><!-- .col-1-1 -->
