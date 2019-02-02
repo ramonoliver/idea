@@ -551,7 +551,8 @@ a:active {
 }
 
 .main-navigation a:hover:after,
-.main-navigation a:active:after {
+.main-navigation a:active:after,
+.main-navigation li.current-menu-item a::after {
 	content: "";
     display: block;
     height: 3px;
