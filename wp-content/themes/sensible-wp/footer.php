@@ -146,7 +146,7 @@
 	</div>
 	
 
-	<div class="home-contato">
+	<div id="contato" class="home-contato">
 		<div class="area-contato col-1-2 wow animated fadeInUp animated">
 			<div class="area-contato-title">
 				<h5>Fale com a gente</h5>
