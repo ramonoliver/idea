@@ -1259,8 +1259,22 @@ function sensiblewp_theme_customizer( $wp_customize ) {
 	'type'     => 'textarea', 
 	'priority'   => 4
 	)));
-	
-	// Home Service Box 2 Section
+
+    // Service Description 1
+    $wp_customize->add_setting( 'service_description_1' ,
+        array(
+            'sanitize_callback' => 'sensiblewp_sanitize_text',
+        ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_description_1', array(
+        'label' => esc_html__( 'Service Description Box 1', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_1',
+        'settings' => 'service_description_1',
+        'type'     => 'textarea',
+        'priority'   => 5
+    )));
+
+    // Home Service Box 2 Section
 	$wp_customize->add_section( 'sensiblewp_services_box_2', array(
 		'title'          => esc_html__( 'Services Box 2', 'sensible-wp' ),
 		'priority'       => 30,
@@ -1322,6 +1336,21 @@ function sensiblewp_theme_customizer( $wp_customize ) {
 	'type'     => 'textarea', 
 	'priority'   => 4
 	)));
+
+    // Service Description 2
+    $wp_customize->add_setting( 'service_description_2' ,
+        array(
+            'sanitize_callback' => 'sensiblewp_sanitize_text',
+        ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_description_2', array(
+        'label' => esc_html__( 'Service Description Box 2', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_2',
+        'settings' => 'service_description_2',
+        'type'     => 'textarea',
+        'priority'   => 5
+    )));
+
 	
 	// Home Service Box 3 Section
 	$wp_customize->add_section( 'sensiblewp_services_box_3', array(
@@ -1384,7 +1413,23 @@ function sensiblewp_theme_customizer( $wp_customize ) {
     'settings' => 'service_text_3',
 	'type'     => 'textarea', 
 	'priority'   => 4
-	))); 
+	)));
+
+
+    // Service Description 3
+    $wp_customize->add_setting( 'service_description_3' ,
+        array(
+            'sanitize_callback' => 'sensiblewp_sanitize_text',
+        ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_description_3', array(
+        'label' => esc_html__( 'Service Description Box 3', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_3',
+        'settings' => 'service_description_3',
+        'type'     => 'textarea',
+        'priority'   => 5
+    )));
+
 
 	// Home Service Box 4 Section
 	$wp_customize->add_section( 'sensiblewp_services_box_4', array(
@@ -1447,7 +1492,21 @@ function sensiblewp_theme_customizer( $wp_customize ) {
     'settings' => 'service_text_4',
 	'type'     => 'textarea', 
 	'priority'   => 4
-	))); 
+	)));
+
+    // Service Description 4
+    $wp_customize->add_setting( 'service_description_4' ,
+        array(
+            'sanitize_callback' => 'sensiblewp_sanitize_text',
+        ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_description_4', array(
+        'label' => esc_html__( 'Service Description Box 4', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_4',
+        'settings' => 'service_description_4',
+        'type'     => 'textarea',
+        'priority'   => 5
+    )));
 
 	// Home Service Box 5 Section
 	$wp_customize->add_section( 'sensiblewp_services_box_5', array(
@@ -1510,7 +1569,21 @@ function sensiblewp_theme_customizer( $wp_customize ) {
     'settings' => 'service_text_5',
 	'type'     => 'textarea', 
 	'priority'   => 4
-	))); 
+	)));
+
+    // Service Description 5
+    $wp_customize->add_setting( 'service_description_5' ,
+        array(
+            'sanitize_callback' => 'sensiblewp_sanitize_text',
+        ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_description_5', array(
+        'label' => esc_html__( 'Service Description Box 5', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_5',
+        'settings' => 'service_description_5',
+        'type'     => 'textarea',
+        'priority'   => 5
+    )));
 
 	// Home Service Box 6 Section
 	$wp_customize->add_section( 'sensiblewp_services_box_6', array(
@@ -1573,7 +1646,21 @@ function sensiblewp_theme_customizer( $wp_customize ) {
     'settings' => 'service_text_6',
 	'type'     => 'textarea', 
 	'priority'   => 4
-	))); 
+	)));
+
+    // Service Description 6
+    $wp_customize->add_setting( 'service_description_6' ,
+        array(
+            'sanitize_callback' => 'sensiblewp_sanitize_text',
+        ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'service_description_6', array(
+        'label' => esc_html__( 'Service Description Box 6', 'sensible-wp' ),
+        'section' => 'sensiblewp_services_box_6',
+        'settings' => 'service_description_6',
+        'type'     => 'textarea',
+        'priority'   => 5
+    )));
 
 	// Blog Panel
 	$wp_customize->add_panel( 'blog_panel', array(
