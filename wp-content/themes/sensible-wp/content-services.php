@@ -5,8 +5,18 @@
  * @package sensible-wp
  */
 ?>
+<style>
+    .hidden{
+        display:none;
+    }
 
+    .service_description{
+        max-width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
 
+</style>
 			<div class="home-services">
             	
 				<?php if ( get_theme_mod( 'services_text' ) ) : ?>
@@ -32,7 +42,7 @@
                         <?php if( get_theme_mod( 'active_service_1' ) == '') : ?>
                         
                         	<?php if ( get_theme_mod( 'service_icon_1' ) ) : ?>
-                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_1' )); ?>"></i>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_1' )); ?>" target="<?php echo esc_html( get_theme_mod( 'service_icon_1' )); ?>"></i>
                             <?php endif; ?> 
                             
                             <?php if ( get_theme_mod( 'service_title_1' ) ) : ?>
@@ -54,7 +64,7 @@
                         <?php if( get_theme_mod( 'active_service_2' ) == '') : ?>
                         
                         	<?php if ( get_theme_mod( 'service_icon_2' ) ) : ?>
-                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_2' )); ?>"></i>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_2' )); ?>" target="<?php echo esc_html( get_theme_mod( 'service_icon_2' )); ?>"></i>
                             <?php endif; ?> 
                             
                             <?php if ( get_theme_mod( 'service_title_2' ) ) : ?>
@@ -76,7 +86,7 @@
                          <?php if( get_theme_mod( 'active_service_3' ) == '') : ?>
                         
                         	<?php if ( get_theme_mod( 'service_icon_3' ) ) : ?>
-                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_3' )); ?>"></i>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_3' )); ?>" target="<?php echo esc_html( get_theme_mod( 'service_icon_3' )); ?>"></i>
                             <?php endif; ?> 
                             
                             <?php if ( get_theme_mod( 'service_title_3' ) ) : ?>
@@ -98,7 +108,7 @@
                         <?php if( get_theme_mod( 'active_service_4' ) == '') : ?>
                         
                         	<?php if ( get_theme_mod( 'service_icon_4' ) ) : ?>
-                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_4' )); ?>"></i>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_4' )); ?>" target="<?php echo esc_html( get_theme_mod( 'service_icon_4' )); ?>"></i>
                             <?php endif; ?> 
                             
                             <?php if ( get_theme_mod( 'service_title_4' ) ) : ?>
@@ -120,7 +130,7 @@
                         <?php if( get_theme_mod( 'active_service_5' ) == '') : ?>
                         
                         	<?php if ( get_theme_mod( 'service_icon_5' ) ) : ?>
-                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_5' )); ?>"></i>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_5' )); ?>" target="<?php echo esc_html( get_theme_mod( 'service_icon_5' )); ?>"></i>
                             <?php endif; ?> 
                             
                             <?php if ( get_theme_mod( 'service_title_5' ) ) : ?>
@@ -142,7 +152,7 @@
                          <?php if( get_theme_mod( 'active_service_6' ) == '') : ?>
                         
                         	<?php if ( get_theme_mod( 'service_icon_6' ) ) : ?>
-                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_6' )); ?>"></i>
+                				<i class="fa <?php echo esc_html( get_theme_mod( 'service_icon_6' )); ?>" target="<?php echo esc_html( get_theme_mod( 'service_icon_6' )); ?>"></i>
                             <?php endif; ?> 
                             
                             <?php if ( get_theme_mod( 'service_title_6' ) ) : ?>
@@ -172,6 +182,69 @@
                             
                             </button></a>
                         
-				<?php endif; ?> 
-                
-        	</div><!-- home-services --> 
+				<?php endif; ?>
+
+
+                <?php if( get_theme_mod( 'active_service_1' ) == '') : ?>
+
+                    <?php if ( get_theme_mod( 'service_description_1' ) ) : ?>
+                        <div class="hidden service_description" target="<?php echo esc_html( get_theme_mod( 'service_icon_1' )); ?>">
+                            <?php echo wp_kses_post( get_theme_mod( 'service_description_1' )); ?>
+                        </div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'active_service_2' ) == '') : ?>
+
+                    <?php if ( get_theme_mod( 'service_description_2' ) ) : ?>
+                        <div class="hidden service_description" target="<?php echo esc_html( get_theme_mod( 'service_icon_2' )); ?>">
+                            <?php echo wp_kses_post( get_theme_mod( 'service_description_2' )); ?>
+                        </div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'active_service_3' ) == '') : ?>
+
+                    <?php if ( get_theme_mod( 'service_description_3' ) ) : ?>
+                        <div class="hidden service_description" target="<?php echo esc_html( get_theme_mod( 'service_icon_3' )); ?>">
+                            <?php echo wp_kses_post( get_theme_mod( 'service_description_3' )); ?>
+                        </div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'active_service_4' ) == '') : ?>
+
+                    <?php if ( get_theme_mod( 'service_description_4' ) ) : ?>
+                        <div class="hidden service_description" target="<?php echo esc_html( get_theme_mod( 'service_icon_4' )); ?>">
+                            <?php echo wp_kses_post( get_theme_mod( 'service_description_4' )); ?>
+                        </div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'active_service_5' ) == '') : ?>
+
+                    <?php if ( get_theme_mod( 'service_description_5' ) ) : ?>
+                        <div class="hidden service_description" target="<?php echo esc_html( get_theme_mod( 'service_icon_5' )); ?>">
+                            <?php echo wp_kses_post( get_theme_mod( 'service_description_5' )); ?>
+                        </div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
+
+                <?php if( get_theme_mod( 'active_service_6' ) == '') : ?>
+
+                    <?php if ( get_theme_mod( 'service_description_6' ) ) : ?>
+                        <div class="hidden service_description" target="<?php echo esc_html( get_theme_mod( 'service_icon_6' )); ?>">
+                            <?php echo wp_kses_post( get_theme_mod( 'service_description_6' )); ?>
+                        </div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
+
+
+
+            </div><!-- home-services -->
