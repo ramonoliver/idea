@@ -174,7 +174,7 @@
                     
                     	<?php if ( get_theme_mod( 'service_button_url' ) ) : ?>
                     		<a href="<?php echo esc_url( get_page_link( get_theme_mod('service_button_url'))) ?>" class="featured-link"> 
-						<?php endif; ?>
+						<?php endif; ?>git
                             
                           	<button class="wow animated fadeIn" data-wow-delay="0.25s">
 							
