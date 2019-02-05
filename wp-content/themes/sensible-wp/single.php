@@ -10,10 +10,11 @@ get_header(); ?>
 	<?php if (has_post_thumbnail( $post->ID ) ): ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); $image = $image[0]; ?>
             
-    	<header class="featured-img-header" data-speed="8" data-type="background" style="background: url('<?php echo $image; ?>') 50% 0 no-repeat fixed;">
+    	<header class="featured-img-header" data-speed="8" data-type="background" style="background: url('http://localhost/idea/wp-content/uploads/2019/02/idea-background.jpg') 50% 0 no-repeat fixed;">
     		<div class="grid grid-pad">
         		<div class="col-1-1">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<div class="breadcrumb"><?php bloglite_breadcrumb(); ?></div>
         		</div><!-- .col-1-1 -->
         	</div><!-- .grid --> 
 		</header><!-- .entry-header --> 
@@ -31,13 +32,6 @@ get_header(); ?>
 	<?php endif; ?>
     
  	<?php while ( have_posts() ) : the_post(); ?>
-       
-	<header class="single-blog-entry-header">
-		<div class="entry-meta">
-			<?php _e( 'Posted by, ', 'sensible-wp' ); ?><?php the_author(); ?><?php echo get_avatar( get_the_author_meta('email'), get_the_author() ); ?>
-            <?php _e( 'on ', 'sensible-wp' ); ?><?php the_date(); ?> 
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
    
 	<div class="grid grid-pad">
     
@@ -48,6 +42,14 @@ get_header(); ?>
     	<?php endif; ?> 
         
 			<main id="main" class="site-main" role="main">
+
+			<div class="col-1-1 img-post">
+				<img src="<?php echo $image; ?>" alt="">
+			</div>
+
+			<div class="entry-meta date-post">
+				<?php the_date(); ?> 
+			</div><!-- .entry-meta -->
 
 			<?php get_template_part( 'content', 'single' ); ?>  
 
